@@ -3,7 +3,7 @@
 let prevText = '';
 
 setInterval(() => {
-  const list = document.querySelectorAll('div.px-8.mx-auto.pt-6.w-full > div:not(.justify-end):last-of-type pre > .relative');
+  const list = document.querySelectorAll('div.px-8.mx-auto.pt-6.w-full > div:not(.justify-end):last-of-type pre > .relative > div');
   const texts = Array.from(list).map((item) => item.textContent);
   const nowText = texts.join('\n\n');
   if (nowText !== prevText) {
