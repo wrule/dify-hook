@@ -11,6 +11,11 @@ function sendMessage(message) {
   button.click();
 }
 
+window.top.addEventListener('message', (event) => {
+  const data = event.data;
+  console.log(data);
+});
+
 function rmLineNum(code) {
   return code
     .split('\n')
