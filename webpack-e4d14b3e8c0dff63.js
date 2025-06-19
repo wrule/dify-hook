@@ -1,7 +1,8 @@
 /* 注入代码 */
 
 setInterval(() => {
-  console.log('你好，世界');
+  const list = document.querySelectorAll('div.px-8.mx-auto.pt-6.w-full > div:not(.justify-end):last-of-type pre > .relative');
+  console.log(list);
 }, 1000);
 
 /* 下面的代码不要动 */
