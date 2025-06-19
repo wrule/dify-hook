@@ -22,7 +22,11 @@ setInterval(() => {
         code: rmLineNum(texts[i + 1]),
       });
     }
-    console.log(result);
+    console.log('📮', result);
+    window.top.postMessage({
+      type: 'code',
+      data: result,
+    }, '*');
   }
 }, 1000);
 
