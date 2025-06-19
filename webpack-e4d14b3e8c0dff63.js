@@ -8,7 +8,14 @@ setInterval(() => {
   const nowText = texts.join('\n\n');
   if (nowText !== prevText) {
     prevText = nowText;
-    console.log(texts);
+    const result = [];
+    for (let i = 0; i < texts.length; i += 2) {
+      result.push({
+        lang: texts[i],
+        code: texts[i + 1],
+      });
+    }
+    console.log(result);
   }
 }, 1000);
 
