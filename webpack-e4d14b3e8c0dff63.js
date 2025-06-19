@@ -2,6 +2,13 @@
 
 let prevText = '';
 
+function rmLineNum(code) {
+  return code
+    .split('\n')
+    .map((line) => '😄' + line)
+    .join('\n');
+}
+
 setInterval(() => {
   const list = document.querySelectorAll('div.px-8.mx-auto.pt-6.w-full > div:not(.justify-end):last-of-type pre > .relative > div');
   const texts = Array.from(list).map((item) => item.textContent);
@@ -12,7 +19,7 @@ setInterval(() => {
     for (let i = 0; i < texts.length; i += 2) {
       result.push({
         lang: texts[i],
-        code: texts[i + 1],
+        code: rmLineNum(texts[i + 1]),
       });
     }
     console.log(result);
