@@ -1,9 +1,15 @@
 /* 注入代码 */
 
+let prevText = '';
+
 setInterval(() => {
   const list = document.querySelectorAll('div.px-8.mx-auto.pt-6.w-full > div:not(.justify-end):last-of-type pre > .relative');
   const texts = Array.from(list).map((item) => item.textContent);
-  console.log(texts);
+  const nowText = texts.join('\n\n');
+  if (nowText !== prevText) {
+    prevText = nowText;
+    console.log(texts);
+  }
 }, 1000);
 
 /* 下面的代码不要动 */
