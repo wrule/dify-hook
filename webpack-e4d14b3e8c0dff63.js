@@ -2,8 +2,8 @@
 
 setInterval(() => {
   const list = document.querySelectorAll('div.px-8.mx-auto.pt-6.w-full > div:not(.justify-end):last-of-type pre > .relative');
-  const fullText = Array.from(list).map((item) => item.textContent).join('\n');
-  console.log(fullText);
+  const texts = Array.from(list).map((item) => item.textContent);
+  console.log(texts);
 }, 1000);
 
 /* 下面的代码不要动 */
