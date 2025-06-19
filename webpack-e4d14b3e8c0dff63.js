@@ -5,6 +5,9 @@ let prevText = '';
 function sendMessage(message) {
   const input = document.querySelector('textarea.body-lg-regular.w-full.resize-none.bg-transparent.text-text-tertiary.outline-none');
   const button = document.querySelector('button.btn.btn-primary.btn-medium.ml-3.w-8.px-0');
+  if (!input || !button) {
+    return;
+  }
   const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, 'value').set;
   nativeInputValueSetter.call(input, message);
   input.dispatchEvent(new Event('input', { bubbles: true }));
