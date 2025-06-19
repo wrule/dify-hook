@@ -12,8 +12,10 @@ function sendMessage(message) {
 }
 
 window.top.addEventListener('message', (event) => {
-  const data = event.data;
-  console.log(data);
+  const data = event.data ?? { };
+  if (data.from === 'top' && data.type === 'message') {
+    sendMessage(data.data ?? '你好');
+  }
 });
 
 function rmLineNum(code) {
