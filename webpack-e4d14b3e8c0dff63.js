@@ -5,7 +5,7 @@ let prevText = '';
 function rmLineNum(code) {
   return code
     .split('\n')
-    .map((line) => '😄' + line)
+    .map((line, index) => line.replace(new RegExp(`^${index + 1}`), ''))
     .join('\n');
 }
 
