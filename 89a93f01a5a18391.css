@@ -1,5 +1,8 @@
 /* 注入代码 */
 
+body > div > div > div.relative.grow.p-2 > div > div.h-full.overflow-hidden.bg-chatbot-bg > div > div.relative.h-full.overflow-y-auto.overflow-x-hidden > div > div:nth-child(1) {
+  display: none;
+}
 
 /* 下面的代码不要动 */
 *,:after,:before {
