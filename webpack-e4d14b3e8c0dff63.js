@@ -24,6 +24,7 @@ setInterval(() => {
     }
     console.log('📮', result);
     window.top.postMessage({
+      from: 'dify',
       type: 'code',
       data: result,
     }, '*');
